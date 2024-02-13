@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.center-container {
+  text-align: center;
+}
+
+.beautiful-button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #f609af;
+  color: #ffffff;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.beautiful-button:hover {
+  background-color: #6e066b;
+}
+
+.fireworks-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1; /* Убеждаемся, что салюты отображаются поверх других элементов */
+}
+
+.firework {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: explode 1s ease-out infinite;
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
